@@ -7,15 +7,34 @@ public class Main {
         // Donguler();
         // Diziler();
         // VerilenDizidekiSayilarinToplaminiVeEnbuyukSayiyiBulma();
-        //CokBoyutluDiziler();
-        //StringFonksiyonlari();
+        // CokBoyutluDiziler();
+        // StringFonksiyonlari();
         // AsalSayiOrnegi();
-        //InceveKalinSesliHarfiBulmaOrnegi();
-        //MukemmelSayiyiBulmaOrnegi(27);
+        // InceveKalinSesliHarfiBulmaOrnegi();
+        // MukemmelSayiyiBulmaOrnegi(27);
         // ArkadasSayiyiBulmaOrnegi(284,220);
-        BirSayininVerilenDizideOlupOlmadiginiBulmaOrnegi(4);
-    }
+        // BirSayininVerilenDizideOlupOlmadiginiBulmaOrnegi(4);
+        //DortIslemRun();
+        //ProductClassIslemleri();
 
+    }
+public static void DortIslemRun(){
+    int toplam = toplamSonuc( 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    System.out.println("Sayılar toplamı: " + toplam);
+    DortIslem dortIslem =new DortIslem();
+    int sonuc = dortIslem.Topla(5,3);
+    System.out.println(sonuc);
+}
+    public static void  ProductClassIslemleri(){
+        Product product = new Product();
+        product.set_price(0);
+        product.set_stockAmount(1);
+        product.set_name("emin");
+        product.setId("1");
+        product.set_description("Mükemmel bişey");
+        ProductManager productManager = new ProductManager();
+        productManager.Add(product);
+    }
     public static void IfElseBloklari() {
         int sayi = 27;
 
@@ -266,24 +285,14 @@ public class Main {
         System.out.println("sayi bulunamadı");
     }
 
-    public static void MetodlariAnlama() {
+    public static int toplamSonuc(int... sayilar) {
+        int toplam = 0;
 
-    }
+        for (int sayi : sayilar) {
+            toplam += sayi;
+        }
 
-    public static void ParametreliMetodlariAnlama() {
-
-    }
-
-    public static void VariableArgumentsIleCalisma() {
-
-    }
-
-    public static void ClassYapisi() {
-
-    }
-
-    public static void HesapMakinesiYapmaOrnegi() {
-
+        return toplam;
     }
 
 }
